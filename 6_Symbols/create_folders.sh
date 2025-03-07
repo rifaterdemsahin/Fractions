@@ -3,10 +3,12 @@
 # move the file to symbols
 # chmod +x ./create_folders.sh;./create_folders.sh
 
+echo "CREATING MAIN FOLDERS"
+
 # Define folder names and their respective README content
 declare -A folders=(
-  ["1_Journey"]="Visual Story Explained with Steps - A self-learning guide from beginner to skilled in visual storytelling. Feel it"
-  ["2_Real"]="The Job That Starts with Objective and Key Results - Sets goals and objectives, aligning tasks with measurable results. Aim at it"
+  ["2_Journey"]="Visual Story Explained with Steps - A self-learning guide from beginner to skilled in visual storytelling. Feel it"
+  ["1_Real"]="The Job That Starts with Objective and Key Results - Sets goals and objectives, aligning tasks with measurable results. Aim at it"
   ["3_Environment"]="The Roadmap and Use Cases - A roadmap with learning modules and real-world use cases to apply new skills. Create it"
   ["4_UI"]="What You Learn on the Road - Tracks concepts, theories, and skills acquired, promoting continuous growth. Imagine it"
   ["5_Formula"]="The Guides That Are Mentioned - Essential guides and formulas for understanding and solving project challenges. Learn from it"
@@ -21,6 +23,8 @@ for folder in "${!folders[@]}"; do
 done
 
 echo "Folder structure created with README.md files."
+
+mkdir -p "6_Symbols/1_Init"  # Create the folder to place initial creation code
 
 # prompts:
 # - objective: cli install with image renderer
